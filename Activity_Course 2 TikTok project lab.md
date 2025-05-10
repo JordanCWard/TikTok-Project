@@ -1,20 +1,6 @@
 # **TikTok Project**
 
-## **PACE: Plan**
-
-Consider the questions in your PACE Strategy Document and those below to craft your response:
-
-
-
-### **Task 1. Understand the situation**
-
-*   How can you best prepare to understand and organize the provided information?
-
-
-*Begin by exploring your dataset and consider reviewing the Data Dictionary.*
-
 <!--
-
 Learn about the dataset by using:
 head()
 tail()
@@ -29,71 +15,21 @@ corr()
 hist()
 plot(kind='box')
 df['col'].value_counts(normalize=True)
-
 -->
 
-<img src="images/Analyze.png" width="100" height="100" align=left>
-
-## **PACE: Analyze**
-
-Consider the questions in your PACE Strategy Document to reflect on the Analyze stage.
-
-### **Task 2a. Imports and data loading**
-
-Start by importing the packages that you will need to load and explore the dataset. Make sure to use the following import statements:
-*   `import pandas as pd`
-
-*   `import numpy as np`
-
-
+Importing packages that are needed to load and explore the dataset.
 
 ```python
 import pandas as pd
 import numpy as np
 ```
 
-Then, load the dataset into a dataframe. Creating a dataframe will help you conduct data manipulation, exploratory data analysis (EDA), and statistical activities.
-
-**Note:** As shown in this cell, the dataset has been automatically loaded in for you. You do not need to download the .csv file, or provide more code, in order to access the dataset and proceed with this lab. Please continue with this activity by completing the following instructions.
-
+Load the dataset into a dataframe.
 
 ```python
 # Load dataset into dataframe
 data = pd.read_csv("tiktok_dataset.csv")
 ```
-
-### **Task 2b. Understand the data - Inspect the data**
-
-View and inspect summary information about the dataframe by **coding the following:**
-
-1. `data.head(10)`
-2. `data.info()`
-3. `data.describe()`
-
-*Consider the following questions:*
-
-**Question 1:** When reviewing the first few rows of the dataframe, what do you observe about the data? What does each row represent?
-
-**Question 2:** When reviewing the `data.info()` output, what do you notice about the different variables? Are there any null values? Are all of the variables numeric? Does anything else stand out?
-
-**Question 3:** When reviewing the `data.describe()` output, what do you notice about the distributions of each variable? Are there any questionable values? Does it seem that there are outlier values?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```python
 # Display and examine the first ten rows of the dataframe
