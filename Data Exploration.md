@@ -1,5 +1,21 @@
 # **Data Exploration**
 
+
+### Summary
+
+Videos by banned authors and those under review generally attract more views, likes, and shares compared to videos by active (non-banned) authors. However, once a video is viewed, its engagement rate is primarily influenced by its claim status rather than the author's ban status.
+
+Claim videos typically achieve higher view rates than opinion videos. Additionally, claim videos receive higher average likes, indicating they are generally more positively received. They also garner greater engagement through comments and shares compared to opinion videos.
+
+Notably, for claim videos, banned authors experience slightly higher engagement rates in terms of likes per view and shares per view than active authors or authors under review. Conversely, for opinion videos, active authors and those under review show higher engagement rates across all categories compared to banned authors.
+
+Out of the 19,382 videos in this dataset, nearly half (9,608) are classified as claim videos. Engagement levels are strongly correlated with claim status, making this an important area for further research.
+
+Overall, videos by banned authors exhibit significantly higher engagement levels than those by active authors, with authors under review having engagement levels intermediate between these two groups.
+
+
+
+
 <!--
 Learn about the dataset by using:
 head()
@@ -16,6 +32,8 @@ hist()
 plot(kind='box')
 df['col'].value_counts(normalize=True)
 -->
+
+### Analysis
 
 ```python
 # Import packages for loading and exploring the dataset.
@@ -678,17 +696,3 @@ data.groupby(['claim_status', 'author_ban_status']).agg(
   </tbody>
 </table>
 </div>
-
-How does the data for claim videos and opinion videos compare or differ? Consider views, comments, likes, and shares.
-Claims have much higher likes, comments and shares per view.
-Claims cause bans more often than opinions.
-
-*   What factors correlate with a video's claim status?
-Higher likes, comments and shares per view usually associate with a claim video. If an author is banned or under review, they are most likely posting claims.
-*   What factors correlate with a video's engagement level?
-Higher likes, comments and shares per view usually associate with a claim video.
-
-*   What percentage of the data is comprised of claims and what percentage is comprised of opinions?
-claim      9608
-opinion    9476
-around 50%
