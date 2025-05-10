@@ -1,22 +1,5 @@
 # **TikTok Project**
 
-# **Identify data types and compile summary information**
-
-
-Throughout these project notebooks, you'll see references to the problem-solving framework PACE. The following notebook components are labeled with the respective PACE stage: Plan, Analyze, Construct, and Execute.
-
-# **PACE stages**
-
-<img src="images/Pace.png" width="100" height="100" align=left>
-
-   *        [Plan](#scrollTo=psz51YkZVwtN&line=3&uniqifier=1)
-   *        [Analyze](#scrollTo=mA7Mz_SnI8km&line=4&uniqifier=1)
-   *        [Construct](#scrollTo=Lca9c8XON8lc&line=2&uniqifier=1)
-   *        [Execute](#scrollTo=401PgchTPr4E&line=2&uniqifier=1)
-
-<img src="images/Plan.png" width="100" height="100" align=left>
-
-
 ## **PACE: Plan**
 
 Consider the questions in your PACE Strategy Document and those below to craft your response:
