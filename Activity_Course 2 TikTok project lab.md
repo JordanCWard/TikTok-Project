@@ -547,16 +547,6 @@ data.groupby(['author_ban_status']).agg(
 </div>
 
 
-
-**Question:** What do you notice about the number of views, likes, and shares for banned authors compared to active authors?
-banned videos have the most views, likes and shares.
-
-Now, create three new columns to help better understand engagement rates:
-* `likes_per_view`: represents the number of likes divided by the number of views for each video
-* `comments_per_view`: represents the number of comments divided by the number of views for each video
-* `shares_per_view`: represents the number of shares divided by the number of views for each video
-
-
 ```python
 # Create a likes_per_view column
 data['likes_per_view'] = data['video_like_count'] / data['video_view_count']
@@ -568,37 +558,17 @@ data['comments_per_view'] = data['video_comment_count'] / data['video_view_count
 data['shares_per_view'] = data['video_share_count'] / data['video_view_count']
 ```
 
-Use `groupby()` to compile the information in each of the three newly created columns for each combination of categories of claim status and author ban status, then use `agg()` to calculate the count, the mean, and the median of each group.
+Use `groupby()` to compile the information in each of the three newly created columns for each combination of categories of claim status and author ban status, then use `agg()` to calculate .
 
 
 ```python
+# Count, mean, and median of each combination of categories of claim status and author ban status
 data.groupby(['claim_status', 'author_ban_status']).agg(
     {'likes_per_view': ['count', 'mean', 'median'],
      'comments_per_view': ['count', 'mean', 'median'],
      'shares_per_view': ['count', 'mean', 'median']})
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
