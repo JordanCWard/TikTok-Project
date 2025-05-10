@@ -462,75 +462,9 @@ data.groupby(['claim_status', 'author_ban_status']).count()[['#']]
 </div>
 
 
-```python
-# Median video share count of each author ban status
-data.groupby(['author_ban_status']).agg(
-    {'video_view_count': ['mean', 'median'],
-     'video_like_count': ['mean', 'median'],
-     'video_share_count': ['mean', 'median']})
-```
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th></th>
-      <th colspan="2" halign="left">video_view_count</th>
-      <th colspan="2" halign="left">video_like_count</th>
-      <th colspan="2" halign="left">video_share_count</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>mean</th>
-      <th>median</th>
-      <th>mean</th>
-      <th>median</th>
-      <th>mean</th>
-      <th>median</th>
-    </tr>
-    <tr>
-      <th>author_ban_status</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>active</th>
-      <td>215927.039524</td>
-      <td>8616.0</td>
-      <td>71036.533836</td>
-      <td>2222.0</td>
-      <td>14111.466164</td>
-      <td>437.0</td>
-    </tr>
-    <tr>
-      <th>banned</th>
-      <td>445845.439144</td>
-      <td>448201.0</td>
-      <td>153017.236697</td>
-      <td>105573.0</td>
-      <td>29998.942508</td>
-      <td>14468.0</td>
-    </tr>
-    <tr>
-      <th>under review</th>
-      <td>392204.836399</td>
-      <td>365245.5</td>
-      <td>128718.050339</td>
-      <td>71204.5</td>
-      <td>25774.696999</td>
-      <td>9444.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
 
 ```python
+# Count, mean and median video share count of each author ban status
 data.groupby(['author_ban_status']).agg(
     {'video_view_count': ['count', 'mean', 'median'],
      'video_like_count': ['count', 'mean', 'median'],
