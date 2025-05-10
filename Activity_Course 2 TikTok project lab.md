@@ -14,6 +14,7 @@ Consider the questions in your PACE Strategy Document and those below to craft y
 *Begin by exploring your dataset and consider reviewing the Data Dictionary.*
 
 /*
+
 Learn about the dataset by using:
 head()
 tail()
@@ -28,6 +29,7 @@ corr()
 hist()
 plot(kind='box')
 df['col'].value_counts(normalize=True)
+
 */
 
 <img src="images/Analyze.png" width="100" height="100" align=left>
