@@ -1,29 +1,6 @@
 # **TikTok Project**
 **Course 2 - Get Started with Python**
 
-Welcome to the TikTok Project!
-
-You have just started as a data professional at TikTok.
-
-The team is still in the early stages of the project. You have received notice that TikTok's leadership team has approved the project proposal. To gain clear insights to prepare for a claims classification model, TikTok's provided data must be examined to begin the process of exploratory data analysis (EDA).
-
-A notebook was structured and prepared to help you in this project. Please complete the following questions.
-
-# **Course 2 End-of-course project: Inspect and analyze data**
-
-In this activity, you will examine data provided and prepare it for analysis.
-<br/>
-
-**The purpose** of this project is to investigate and understand the data provided. This activity will:
-
-1.   Acquaint you with the data
-
-2.   Compile summary information about the data
-
-3.   Begin the process of EDA and reveal insights contained in the data
-
-4.   Prepare you for more in-depth EDA, hypothesis testing, and statistical analysis
-
 **The goal** is to construct a dataframe in Python, perform a cursory inspection of the provided dataset, and inform TikTok data team members of your findings.
 <br/>
 *This activity has three parts:*
