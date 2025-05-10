@@ -556,12 +556,7 @@ data['comments_per_view'] = data['video_comment_count'] / data['video_view_count
 
 # Create a shares_per_view column
 data['shares_per_view'] = data['video_share_count'] / data['video_view_count']
-```
 
-Use `groupby()` to compile the information in each of the three newly created columns for each combination of categories of claim status and author ban status, then use `agg()` to calculate .
-
-
-```python
 # Count, mean, and median of each combination of categories of claim status and author ban status
 data.groupby(['claim_status', 'author_ban_status']).agg(
     {'likes_per_view': ['count', 'mean', 'median'],
@@ -684,42 +679,16 @@ data.groupby(['claim_status', 'author_ban_status']).agg(
 </table>
 </div>
 
-
-
-**Question:**
-
 How does the data for claim videos and opinion videos compare or differ? Consider views, comments, likes, and shares.
 Claims have much higher likes, comments and shares per view.
 Claims cause bans more often than opinions.
 
-<img src="images/Construct.png" width="100" height="100" align=left>
-
-## **PACE: Construct**
-
-**Note**: The Construct stage does not apply to this workflow. The PACE framework can be adapted to fit the specific requirements of any project.
-
-
-
-
-<img src="images/Execute.png" width="100" height="100" align=left>
-
-## **PACE: Execute**
-
-Consider the questions in your PACE Strategy Document and those below to craft your response.
-
-### **Given your efforts, what can you summarize for Rosie Mae Bradshaw and the TikTok data team?**
-
-*Note for Learners: Your answer should address TikTok's request for a summary that covers the following points:*
-
-*   What percentage of the data is comprised of claims and what percentage is comprised of opinions?
-claim      9608
-opinion    9476
-around 50%
 *   What factors correlate with a video's claim status?
 Higher likes, comments and shares per view usually associate with a claim video. If an author is banned or under review, they are most likely posting claims.
 *   What factors correlate with a video's engagement level?
 Higher likes, comments and shares per view usually associate with a claim video.
 
-==> ENTER YOUR RESPONSE HERE
-
-**Congratulations!** You've completed this lab. However, you may not notice a green check mark next to this item on Coursera's platform. Please continue your progress regardless of the check mark. Just click on the "save" icon at the top of this notebook to ensure your work has been logged.
+*   What percentage of the data is comprised of claims and what percentage is comprised of opinions?
+claim      9608
+opinion    9476
+around 50%
