@@ -1,28 +1,4 @@
 # **TikTok Project**
-**Course 2 - Get Started with Python**
-
-**The goal** is to construct a dataframe in Python, perform a cursory inspection of the provided dataset, and inform TikTok data team members of your findings.
-<br/>
-*This activity has three parts:*
-
-**Part 1:** Understand the situation
-* How can you best prepare to understand and organize the provided TikTok information?
-
-**Part 2:** Understand the data
-
-* Create a pandas dataframe for data learning and future exploratory data analysis (EDA) and statistical activities
-
-* Compile summary information about the data to inform next steps
-
-**Part 3:** Understand the variables
-
-* Use insights from your examination of the summary data to guide deeper investigation into variables
-
-<br/>
-
-To complete the activity, follow the instructions and answer the questions below. Then, you will us your responses to these questions and the questions included in the Course 2 PACE Strategy Document to create an executive summary.
-
-Be sure to complete this activity before moving on to Course 3. You can assess your work by comparing the results to a completed exemplar after completing the end-of-course project.
 
 # **Identify data types and compile summary information**
 
@@ -54,6 +30,7 @@ Consider the questions in your PACE Strategy Document and those below to craft y
 
 *Begin by exploring your dataset and consider reviewing the Data Dictionary.*
 
+/*
 Learn about the dataset by using:
 head()
 tail()
@@ -68,6 +45,7 @@ corr()
 hist()
 plot(kind='box')
 df['col'].value_counts(normalize=True)
+*/
 
 <img src="images/Analyze.png" width="100" height="100" align=left>
 
