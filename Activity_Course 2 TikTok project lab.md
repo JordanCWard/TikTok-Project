@@ -462,15 +462,6 @@ data.groupby(['claim_status', 'author_ban_status']).count()[['#']]
 </div>
 
 
-
-**Question:** What do you notice about the number of claims videos with banned authors? Why might this relationship occur?
-Claims are easier to ban for because they have a value to test, it's difficult to test whether opinions are true/false.
-
-Continue investigating engagement levels, now focusing on `author_ban_status`.
-
-Calculate the 
-
-
 ```python
 # Median video share count of each author ban status
 data.groupby(['author_ban_status']).agg(
@@ -479,24 +470,6 @@ data.groupby(['author_ban_status']).agg(
      'video_share_count': ['mean', 'median']})
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
