@@ -344,49 +344,14 @@ data.describe()
 </div>
 
 
-
-**Question 1:** When reviewing the first few rows of the dataframe, what do you observe about the data? What does each row represent?
-
-claim_status might have multiple values but we can only see 'claim. video_transcription_text always starts with the same text, is this always true? What is author_ban_status and what are the conditions for ban? video_id is the primary key.
-
-**Question 2:** When reviewing the `data.info()` output, what do you notice about the different variables? Are there any null values? Are all of the variables numeric? Does anything else stand out?
-
-There are null values in 7 columns, 19382 rows and 7 columns have less than 13892 values. There are int64, object and float64 types. 
-
-**Question 3:** When reviewing the `data.describe()` output, what do you notice about the distributions of each variable? Are there any questionable values? Does it seem that there are outlier values?
-
-count shows us which columns have null values. Every video has been viewed at least 20 times. Every video is one minute or less.
-
-### **Task 2c. Understand the data - Investigate the variables**
-
-In this phase, you will begin to investigate the variables more closely to better understand them.
-
-You know from the project proposal that the ultimate objective is to use machine learning to classify videos as either claims or opinions. A good first step towards understanding the data might therefore be examining the `claim_status` variable. Begin by determining how many videos there are for each different claim status.
-
-
 ```python
 # What are the different values for claim status and how many of each are in the data?
 data['claim_status'].value_counts()
-
 ```
-
-
-
 
     claim      9608
     opinion    9476
     Name: claim_status, dtype: int64
-
-
-
-**Question:** What do you notice about the values shown?
-
-It's about equal.
-
-Next, examine the engagement trends associated with each different claim status.
-
-Start by using Boolean masking to filter the data according to claim status, then calculate the mean and median view counts for each claim status.
-
 
 ```python
 # What is the average view count of videos with "claim" status?
@@ -416,7 +381,6 @@ print('Median view count claims:', claims['video_view_count'].median())
     
     Mean view count claims: 501029.4527477102
     Median view count claims: 501555.0
-
 
 
 ```python
