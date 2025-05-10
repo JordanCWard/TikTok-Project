@@ -20,23 +20,16 @@ df['col'].value_counts(normalize=True)
 Importing packages that are needed to load and explore the dataset.
 
 ```python
+# Import packages for loading and exploring the dataset.
 import pandas as pd
 import numpy as np
-```
 
-Load the dataset into a dataframe.
-
-```python
 # Load dataset into dataframe
 data = pd.read_csv("tiktok_dataset.csv")
-```
 
-```python
 # Display and examine the first ten rows of the dataframe
 data.head(10)
 ```
-
-
 
 
 <div>
