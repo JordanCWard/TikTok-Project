@@ -25,7 +25,7 @@ import numpy as np
 # Load dataset into dataframe
 data = pd.read_csv("tiktok_dataset.csv")
 
-# Display and examine the first ten rows of the dataframe
+# Display first ten rows of the dataframe
 data.head(10)
 ```
 
@@ -345,7 +345,7 @@ data.describe()
 
 
 ```python
-# What are the different values for claim status and how many of each are in the data?
+# Values and counts for claim status
 data['claim_status'].value_counts()
 ```
 
@@ -354,7 +354,7 @@ data['claim_status'].value_counts()
     Name: claim_status, dtype: int64
 
 ```python
-# What is the average view count of videos with "claim" status?
+# Average view count of videos with "claim" status
 claims = data[data['claim_status'] == 'claim']
 
 summary_claim = pd.DataFrame({
@@ -384,7 +384,7 @@ print('Median view count claims:', claims['video_view_count'].median())
 
 
 ```python
-# What is the average view count of videos with "opinion" status?
+# Average view count of videos with "opinion" status
 opinions = data[data['claim_status'] == 'opinion']
 
 summary_opinion = pd.DataFrame({
@@ -412,39 +412,11 @@ print('Median view count opinions:', opinions['video_view_count'].median())
     Mean view count opinions: 4956.43224989447
     Median view count opinions: 4953.0
 
-
-**Question:** What do you notice about the mean and media within each claim category?
-Opinions get more views.
-
-Now, examine trends associated with the ban status of the author.
-
-Use `groupby()` to calculate how many videos there are for each combination of categories of claim status and author ban status.
-
-
 ```python
-# Get counts for each group combination of claim status and author ban status
-
+# Counts for each group combination of claim status and author ban status
 data.groupby(['claim_status', 'author_ban_status']).count()[['#']]
-
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -496,19 +468,16 @@ Claims are easier to ban for because they have a value to test, it's difficult t
 
 Continue investigating engagement levels, now focusing on `author_ban_status`.
 
-Calculate the median video share count of each author ban status.
+Calculate the 
 
 
 ```python
+# Median video share count of each author ban status
 data.groupby(['author_ban_status']).agg(
     {'video_view_count': ['mean', 'median'],
      'video_like_count': ['mean', 'median'],
      'video_share_count': ['mean', 'median']})
-
 ```
-
-
-
 
 <div>
 <style scoped>
@@ -588,72 +557,6 @@ data.groupby(['author_ban_status']).agg(
 </div>
 
 
-
-
-```python
-# What's the median video share count of each author ban status?
-
-data.groupby(['author_ban_status']).median(numeric_only=True)[['video_share_count']]
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>video_share_count</th>
-    </tr>
-    <tr>
-      <th>author_ban_status</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>active</th>
-      <td>437.0</td>
-    </tr>
-    <tr>
-      <th>banned</th>
-      <td>14468.0</td>
-    </tr>
-    <tr>
-      <th>under review</th>
-      <td>9444.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-**Question:** What do you notice about the share count of banned authors, compared to that of active authors? Explore this in more depth.
-Videos are shared more in the banned category.
-
-Use `groupby()` to group the data by `author_ban_status`, then use `agg()` to get the count, mean, and median of each of the following columns:
-* `video_view_count`
-* `video_like_count`
-* `video_share_count`
-
-Remember, the argument for the `agg()` function is a dictionary whose keys are columns. The values for each column are a list of the calculations you want to perform.
-
-
 ```python
 data.groupby(['author_ban_status']).agg(
     {'video_view_count': ['count', 'mean', 'median'],
@@ -662,27 +565,6 @@ data.groupby(['author_ban_status']).agg(
      })
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-
-    .dataframe thead tr:last-of-type th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
