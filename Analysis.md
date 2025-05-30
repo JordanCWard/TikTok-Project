@@ -122,26 +122,21 @@ data.head()
 
 
 ```python
-# Get the size of the data
+# Size of the data
 data.size
 ```
-
     232584
-
 
 ```python
 # Shape of the data
 data.shape
 ```
-
     (19382, 12)
-
 
 ```python
 # Basic information about the data
 data.info()
 ```
-
     <class 'pandas.core.frame.DataFrame'>
     RangeIndex: 19382 entries, 0 to 19381
     Data columns (total 12 columns):
@@ -161,8 +156,6 @@ data.info()
      11  video_comment_count       19084 non-null  float64
     dtypes: float64(5), int64(3), object(4)
     memory usage: 1.8+ MB
-
-
 
 ```python
 # Descriptive statistics
