@@ -369,8 +369,7 @@ plt.xlabel('Likes')
 plt.show()
 ```
 
-
-![png](output_42_0.png)
+![output_42_0](https://github.com/user-attachments/assets/6c5c0c06-50ee-4ca4-8a59-61b971c5ce47)
 
 
 Create a histogram of the values in the `video_like_count` column to further explore the distribution of this variable.
@@ -391,8 +390,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_44_0.png)
+![output_44_0](https://github.com/user-attachments/assets/fa1b55d2-2fb8-4185-8c87-d0a874f76d7c)
 
 
 Similar to view count, significantly more videos have fewer than 100,000 likes than those with more. However, the distribution tapers off more gradually in this case, with a right skew and many videos clustered at the higher end of the like count.
@@ -412,8 +410,7 @@ plt.xlabel('Comments')
 plt.show()
 ```
 
-
-![png](output_47_0.png)
+![output_47_0](https://github.com/user-attachments/assets/927f949d-2a11-476f-8f18-05c11beaf92c)
 
 
 Create a histogram of the values in the `video_comment_count` column to further explore the distribution of this variable.
@@ -431,8 +428,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_49_0.png)
+![output_49_0](https://github.com/user-attachments/assets/9c5e7b73-8f3b-4b35-adca-6c364754ccb3)
 
 
 Once again, the vast majority of videos fall at the lower end of the comment count range, with most receiving fewer than 100 comments. The distribution is heavily right-skewed.
@@ -453,7 +449,7 @@ plt.show()
 ```
 
 
-![png](output_52_0.png)
+![output_52_0](https://github.com/user-attachments/assets/232abe4f-5d10-4fc2-be81-237b438e91b6)
 
 
 *Create* a histogram of the values in the `video_share_count` column to further explore the distribution of this variable.
@@ -472,7 +468,7 @@ plt.show()
 ```
 
 
-![png](output_54_0.png)
+![output_54_0](https://github.com/user-attachments/assets/2f0c036a-c9e3-4659-a283-adb3ac72a935)
 
 
 The overwhelming majority of videos received fewer than 10,000 shares, with the distribution being heavily right-skewed.
@@ -492,8 +488,7 @@ plt.xlabel('Downloads')
 plt.show()
 ```
 
-
-![png](output_57_0.png)
+![output_57_0](https://github.com/user-attachments/assets/d00095a6-5442-4a72-9070-249c211a779b)
 
 
 Create a histogram of the values in the `video_download_count` column to further explore the distribution of this variable.
@@ -511,8 +506,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_59_0.png)
+![output_59_0](https://github.com/user-attachments/assets/82793674-98fc-48bf-91e7-bdf8308d4e9a)
 
 
 The majority of videos were downloaded fewer than 500 times, though some exceeded 12,000 downloads. Once again, the distribution is heavily right-skewed.
@@ -534,8 +528,7 @@ sns.histplot(data=data,
 plt.title('Claims by verification status histogram');
 ```
 
-
-![png](output_62_0.png)
+![output_62_0](https://github.com/user-attachments/assets/dcb0e8e0-9b9b-4fab-b11c-274afa028609)
 
 
 Verified users are far fewer than unverified ones, but they are significantly more likely to post opinions.
@@ -558,8 +551,7 @@ sns.histplot(data, x='claim_status', hue='author_ban_status',
 plt.title('Claim Status by Author Ban Status');
 ```
 
-
-![png](output_65_0.png)
+![output_65_0](https://github.com/user-attachments/assets/9d690607-60ab-4d9e-828e-62287dd1b8b0)
 
 
 For both claims and opinions, active authors greatly outnumber those who are banned or under review. However, the proportion of active authors is much higher for opinion videos than for claim videos, suggesting that authors of claim videos are more likely to be reviewed or banned.
@@ -586,8 +578,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_68_0.png)
+![output_68_0](https://github.com/user-attachments/assets/0c1d79cc-6cc4-4499-9d4b-07bf75711bee)
 
 
 The median view counts for non-active authors are significantly higher than those for active authors. Given that non-active authors are more likely to post claims, and their videos receive substantially more views overall, video_view_count could serve as a useful indicator of claim status.
@@ -622,8 +613,7 @@ plt.pie(data.groupby('claim_status')['video_view_count'].sum(), labels=['claim',
 plt.title('Total views by video claim status');
 ```
 
-
-![png](output_72_0.png)
+![output_72_0](https://github.com/user-attachments/assets/c510c5ed-a470-4180-945f-1c75f51491ea)
 
 
 Although the dataset contains roughly equal numbers of claim and opinion videos, the overall view count is heavily dominated by claim videos.
@@ -702,9 +692,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_77_0.png)
-
+![output_77_0](https://github.com/user-attachments/assets/e6a2225e-0c64-470f-a278-289275ce55b6)
 
 
 ```python
@@ -723,8 +711,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_78_0.png)
+![output_78_0](https://github.com/user-attachments/assets/572f7bbb-51e3-463e-babb-d32e279a9d32)
 
 
 You can do a scatterplot in Tableau Public as well, which can be easier to manipulate and present. If you'd like step by step instructions, you can review the instructions linked in the previous Activity page.
