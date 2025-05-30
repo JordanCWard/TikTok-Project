@@ -270,9 +270,11 @@ data.describe()
 </div>
 
 
+<br>
+
 ### Visualizations
 
-#### **video_duration_sec**
+#### video_duration_sec
 
 All videos range from 5 to 60 seconds in length, with a uniform distribution.
 
