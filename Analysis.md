@@ -310,8 +310,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-
-![png](output_34_0.png)
+![output_34_0](https://github.com/user-attachments/assets/28a6164e-92d3-4794-be93-a45d3d214313)
 
 
 All videos range from 5 to 60 seconds in length, with a uniform distribution.
@@ -331,8 +330,7 @@ plt.xlabel('Views')
 plt.show()
 ```
 
-
-![png](output_37_0.png)
+![output_37_0](https://github.com/user-attachments/assets/40c3b6aa-40fc-4c01-91c8-96905ebaf952)
 
 
 Create a histogram of the values in the `video_view_count` column to further explore the distribution of this variable.
@@ -350,8 +348,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+![output_39_0](https://github.com/user-attachments/assets/9225ecb7-bc5e-47a9-9e6d-0fdb9ddf5abb)
 
-![png](output_39_0.png)
 
 
 This variable has a highly uneven distribution, with over half of the videos receiving fewer than 100,000 views. For view counts above 100,000, the distribution is uniform.
