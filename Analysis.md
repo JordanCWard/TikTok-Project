@@ -291,7 +291,8 @@ plt.show()
 ```
 
 
-![png](output_32_0.png)
+![output_32_0](https://github.com/user-attachments/assets/877efb68-a9bd-43a6-b179-f2a9ec039050)
+
 
 
 Create a histogram of the values in the `video_duration_sec` column to further explore the distribution of this variable.
