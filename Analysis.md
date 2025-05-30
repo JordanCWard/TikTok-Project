@@ -10,43 +10,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-Then, load the dataset into a dataframe. Read in the data and store it as a dataframe object.
-
-**Note:** As shown in this cell, the dataset has been automatically loaded in for you. You do not need to download the .csv file, or provide more code, in order to access the dataset and proceed with this lab. Please continue with this activity by completing the following instructions.
-
-
-
 ```python
 # Load dataset into dataframe
 data = pd.read_csv("tiktok_dataset.csv")
 ```
-
-<img src="images/Analyze.png" width="100" height="100" align=left>
-
-## **PACE: Analyze**
-
-Consider the questions in your PACE Strategy Document and those below where applicable to complete your code.
-
-### **Task 2a: Data exploration and cleaning**
-
-The first step is to assess your data. Check the Data Source page on Tableau Public to get a sense of the size, shape and makeup of the data set.
-
-Consider functions that help you understand and structure the data.
-
-*    `.head()`
-*    `.info()`
-*    `.describe()`
-*    `.groupby()`
-*    `.sort_values()`
-
-Consider the following questions as you work:
-
-What do you do about missing data (if any)?
-
-Are there data outliers?
-
-Start by discovering, using `.head()`, `.size`, and `.shape`.
-
 
 ```python
 # Display and examine the first few rows of the dataframe
