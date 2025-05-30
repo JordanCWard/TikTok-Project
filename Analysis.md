@@ -277,9 +277,11 @@ data.describe()
 </div>
 
 
-### Build visualizations**
+### Visualizations
 
 #### **video_duration_sec**
+
+All videos range from 5 to 60 seconds in length, with a uniform distribution.
 
 ```python
 # Boxplot to visualize distribution of `video_duration_sec`
@@ -290,12 +292,7 @@ plt.xlabel('Seconds')
 plt.show()
 ```
 
-
 ![output_32_0](https://github.com/user-attachments/assets/877efb68-a9bd-43a6-b179-f2a9ec039050)
-
-
-
-Create a histogram of the values in the `video_duration_sec` column to further explore the distribution of this variable.
 
 
 ```python
@@ -313,12 +310,9 @@ plt.show()
 ![output_34_0](https://github.com/user-attachments/assets/28a6164e-92d3-4794-be93-a45d3d214313)
 
 
-All videos range from 5 to 60 seconds in length, with a uniform distribution.
-
 #### **video_view_count**
 
-Create a box plot to examine the spread of values in the `video_view_count` column.
-
+Video view count has a highly uneven distribution, with over half of the videos receiving fewer than 100,000 views. For view counts above 100,000, the distribution is uniform.
 
 ```python
 # Boxplot to visualize distribution of `video_view_count`
@@ -331,9 +325,6 @@ plt.show()
 ```
 
 ![output_37_0](https://github.com/user-attachments/assets/40c3b6aa-40fc-4c01-91c8-96905ebaf952)
-
-
-Create a histogram of the values in the `video_view_count` column to further explore the distribution of this variable.
 
 
 ```python
@@ -351,13 +342,9 @@ plt.show()
 ![output_39_0](https://github.com/user-attachments/assets/9225ecb7-bc5e-47a9-9e6d-0fdb9ddf5abb)
 
 
-
-This variable has a highly uneven distribution, with over half of the videos receiving fewer than 100,000 views. For view counts above 100,000, the distribution is uniform.
-
 #### **video_like_count**
 
-Create a box plot to examine the spread of values in the `video_like_count` column.
-
+Similar to view count, significantly more videos have fewer than 100,000 likes than those with more. However, the distribution tapers off more gradually in this case, with a right skew and many videos clustered at the higher end of the like count.
 
 ```python
 # Boxplot to visualize distribution of `video_like_count`
@@ -370,9 +357,6 @@ plt.show()
 ```
 
 ![output_42_0](https://github.com/user-attachments/assets/6c5c0c06-50ee-4ca4-8a59-61b971c5ce47)
-
-
-Create a histogram of the values in the `video_like_count` column to further explore the distribution of this variable.
 
 
 ```python
@@ -393,12 +377,9 @@ plt.show()
 ![output_44_0](https://github.com/user-attachments/assets/fa1b55d2-2fb8-4185-8c87-d0a874f76d7c)
 
 
-Similar to view count, significantly more videos have fewer than 100,000 likes than those with more. However, the distribution tapers off more gradually in this case, with a right skew and many videos clustered at the higher end of the like count.
-
 #### **video_comment_count**
 
-Create a box plot to examine the spread of values in the `video_comment_count` column.
-
+Once again, the vast majority of videos fall at the lower end of the comment count range, with most receiving fewer than 100 comments. The distribution is heavily right-skewed.
 
 ```python
 # Boxplot to visualize distribution of `video_comment_count`
@@ -411,9 +392,6 @@ plt.show()
 ```
 
 ![output_47_0](https://github.com/user-attachments/assets/927f949d-2a11-476f-8f18-05c11beaf92c)
-
-
-Create a histogram of the values in the `video_comment_count` column to further explore the distribution of this variable.
 
 
 ```python
@@ -431,12 +409,9 @@ plt.show()
 ![output_49_0](https://github.com/user-attachments/assets/9c5e7b73-8f3b-4b35-adca-6c364754ccb3)
 
 
-Once again, the vast majority of videos fall at the lower end of the comment count range, with most receiving fewer than 100 comments. The distribution is heavily right-skewed.
-
 #### **video_share_count**
 
-Create a box plot to examine the spread of values in the `video_share_count` column.
-
+The overwhelming majority of videos received fewer than 10,000 shares, with the distribution being heavily right-skewed.
 
 ```python
 # Boxplot to visualize distribution of `video_share_count`
@@ -448,11 +423,7 @@ plt.xlabel('Shares')
 plt.show()
 ```
 
-
 ![output_52_0](https://github.com/user-attachments/assets/232abe4f-5d10-4fc2-be81-237b438e91b6)
-
-
-*Create* a histogram of the values in the `video_share_count` column to further explore the distribution of this variable.
 
 
 ```python
@@ -467,16 +438,12 @@ plt.tight_layout()
 plt.show()
 ```
 
-
 ![output_54_0](https://github.com/user-attachments/assets/2f0c036a-c9e3-4659-a283-adb3ac72a935)
 
 
-The overwhelming majority of videos received fewer than 10,000 shares, with the distribution being heavily right-skewed.
-
 #### **video_download_count**
 
-Create a box plot to examine the spread of values in the `video_download_count` column.
-
+The majority of videos were downloaded fewer than 500 times, though some exceeded 12,000 downloads. Once again, the distribution is heavily right-skewed.
 
 ```python
 # Boxplot to visualize distribution of `video_download_count`
@@ -489,10 +456,6 @@ plt.show()
 ```
 
 ![output_57_0](https://github.com/user-attachments/assets/d00095a6-5442-4a72-9070-249c211a779b)
-
-
-Create a histogram of the values in the `video_download_count` column to further explore the distribution of this variable.
-
 
 ```python
 # Histogram to visualize distribution of `video_download_count`
@@ -509,12 +472,9 @@ plt.show()
 ![output_59_0](https://github.com/user-attachments/assets/82793674-98fc-48bf-91e7-bdf8308d4e9a)
 
 
-The majority of videos were downloaded fewer than 500 times, though some exceeded 12,000 downloads. Once again, the distribution is heavily right-skewed.
+#### Claim status by verification status
 
-#### **Claim status by verification status**
-
-Now, create a histogram with four bars: one for each combination of claim status and verification status.
-
+Verified users are far fewer than unverified ones, but they are significantly more likely to post opinions.
 
 ```python
 # Histogram to visualize claim status and verification status
@@ -531,12 +491,9 @@ plt.title('Claims by verification status histogram');
 ![output_62_0](https://github.com/user-attachments/assets/dcb0e8e0-9b9b-4fab-b11c-274afa028609)
 
 
-Verified users are far fewer than unverified ones, but they are significantly more likely to post opinions.
-
 #### **Claim status by author ban status**
 
-The previous course used a `groupby()` statement to examine the count of each claim status for each author ban status. Now, use a histogram to communicate the same information.
-
+For both claims and opinions, active authors greatly outnumber those who are banned or under review. However, the proportion of active authors is much higher for opinion videos than for claim videos, suggesting that authors of claim videos are more likely to be reviewed or banned.
 
 ```python
 # Histogram to visualize claim status by author ban status
@@ -554,12 +511,9 @@ plt.title('Claim Status by Author Ban Status');
 ![output_65_0](https://github.com/user-attachments/assets/9d690607-60ab-4d9e-828e-62287dd1b8b0)
 
 
-For both claims and opinions, active authors greatly outnumber those who are banned or under review. However, the proportion of active authors is much higher for opinion videos than for claim videos, suggesting that authors of claim videos are more likely to be reviewed or banned.
-
 #### **Median view counts by ban status**
 
-Create a bar plot with three bars: one for each author ban status. The height of each bar should correspond with the median number of views for all videos with that author ban status.
-
+The median view counts for non-active authors are significantly higher than those for active authors. Given that non-active authors are more likely to post claims, and their videos receive substantially more views overall, video_view_count could serve as a useful indicator of claim status.
 
 ```python
 # Bar plot to visualize median views by ban status
@@ -581,17 +535,11 @@ plt.show()
 ![output_68_0](https://github.com/user-attachments/assets/0c1d79cc-6cc4-4499-9d4b-07bf75711bee)
 
 
-The median view counts for non-active authors are significantly higher than those for active authors. Given that non-active authors are more likely to post claims, and their videos receive substantially more views overall, video_view_count could serve as a useful indicator of claim status.
-
-
 ```python
 # Median view count for claim status
 
 data.groupby('claim_status')['video_view_count'].median()
 ```
-
-
-
 
     claim_status
     claim      501555.0
@@ -599,11 +547,9 @@ data.groupby('claim_status')['video_view_count'].median()
     Name: video_view_count, dtype: float64
 
 
+#### Total views by claim status
 
-#### **Total views by claim status**
-
-Create a pie graph that depicts the proportions of total views for claim videos and total views for opinion videos.
-
+Although the dataset contains roughly equal numbers of claim and opinion videos, the overall view count is heavily dominated by claim videos.
 
 ```python
 # Pie chart showing the porportion of views by video claim status
@@ -616,35 +562,14 @@ plt.title('Total views by video claim status');
 ![output_72_0](https://github.com/user-attachments/assets/c510c5ed-a470-4180-945f-1c75f51491ea)
 
 
-Although the dataset contains roughly equal numbers of claim and opinion videos, the overall view count is heavily dominated by claim videos.
+### Outliers
 
-### **Task 4. Determine outliers**
-
-When building predictive models, the presence of outliers can be problematic. For example, if you were trying to predict the view count of a particular video, videos with extremely high view counts might introduce bias to a model. Also, some outliers might indicate problems with how data was captured or recorded.
-
-The ultimate objective of the TikTok project is to build a model that predicts whether a video is a claim or opinion. The analysis you've performed indicates that a video's engagement level is strongly correlated with its claim status. There's no reason to believe that any of the values in the TikTok data are erroneously captured, and they align with expectation of how social media works: a very small proportion of videos get super high engagement levels. That's the nature of viral content.
-
-Nonetheless, it's good practice to get a sense of just how many of your data points could be considered outliers. The definition of an outlier can change based on the details of your project, and it helps to have domain expertise to decide a threshold. You've learned that a common way to determine outliers in a normal distribution is to calculate the interquartile range (IQR) and set a threshold that is 1.5 * IQR above the 3rd quartile.
-
-In this TikTok dataset, the values for the count variables are not normally distributed. They are heavily skewed to the right. One way of modifying the outlier threshold is by calculating the **median** value for each variable and then adding 1.5 * IQR. This results in a threshold that is, in this case, much lower than it would be if you used the 3rd quartile.
-
-Write a for loop that iterates over the column names of each count variable. For each iteration:
-1. Calculate the IQR of the column
-2. Calculate the median of the column
-3. Calculate the outlier threshold (median + 1.5 * IQR)
-4. Calculate the numer of videos with a count in that column that exceeds the outlier threshold
-5. Print "Number of outliers, {column name}: {outlier count}"
-
-```
-Example:
-Number of outliers, video_view_count: ___
-Number of outliers, video_like_count: ___
-Number of outliers, video_share_count: ___
-Number of outliers, video_download_count: ___
-Number of outliers, video_comment_count: ___
-```
-
-
+    Outliers for video_view_count: 2343
+    Outliers for video_like_count: 3468
+    Outliers for video_share_count: 3732
+    Outliers for video_download_count: 3733
+    Outliers for video_comment_count: 3882
+    
 ```python
 # Number of outliers (median + 1.5 * IQR)
 
@@ -653,8 +578,6 @@ count_cols = ['video_view_count',
               'video_share_count',
               'video_download_count',
               'video_comment_count']
-
-
 
 for col in count_cols:
     median = data[col].median()
@@ -668,14 +591,8 @@ for col in count_cols:
     print(f"Outliers for {col}: {count}")
 ```
 
-    Outliers for video_view_count: 2343
-    Outliers for video_like_count: 3468
-    Outliers for video_share_count: 3732
-    Outliers for video_download_count: 3733
-    Outliers for video_comment_count: 3882
 
-
-#### **Scatterplot**
+#### Scatterplots
 
 
 ```python
@@ -712,55 +629,3 @@ plt.show()
 ```
 
 ![output_78_0](https://github.com/user-attachments/assets/572f7bbb-51e3-463e-babb-d32e279a9d32)
-
-
-You can do a scatterplot in Tableau Public as well, which can be easier to manipulate and present. If you'd like step by step instructions, you can review the instructions linked in the previous Activity page.
-
-<img src="images/Execute.png" width="100" height="100" align=left>
-
-## **PACE: Execute**
-
-Consider the questions in your PACE Strategy Document to reflect on the Execute stage.
-
-### **Task 5a. Results and evaluation**
-
-Having built visualizations in Tableau and in Python, what have you learned about the dataset? What other questions have your visualizations uncovered that you should pursue?
-
-***Pro tip:*** Put yourself in your client's perspective, what would they want to know?
-
-Use the following code cells to pursue any additional EDA. Also use the space to make sure your visualizations are clean, easily understandable, and accessible.
-
-***Ask yourself:*** Did you consider color, contrast, emphasis, and labeling?
-
-
-==> ENTER YOUR RESPONSE HERE
-
-I have learned ....
-
-My other questions are ....
-
-My client would likely want to know ...
-
-
-
-### **Task 5b. Conclusion**
-*Make it professional and presentable*
-
-You have visualized the data you need to share with the director now. Remember, the goal of a data visualization is for an audience member to glean the information on the chart in mere seconds.
-
-*Questions to ask yourself for reflection:*
-Why is it important to conduct Exploratory Data Analysis? What other visuals could you create?
-
-
-EDA is important because ...
-
-==> ENTER YOUR RESPONSES HERE
-
-Visualizations helped me understand ..
-
-==> ENTER YOUR RESPONSES HERE
-
-
-You’ve now completed a professional data visualization according to a business need. Well done! Be sure to save your work as a reference for later work in Tableau.
-
-**Congratulations!** You've completed this lab. However, you may not notice a green check mark next to this item on Coursera's platform. Please continue your progress regardless of the check mark. Just click on the "save" icon at the top of this notebook to ensure your work has been logged.
