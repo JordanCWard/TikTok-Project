@@ -16,7 +16,7 @@ data = pd.read_csv("tiktok_dataset.csv")
 ```
 
 ```python
-# Display and examine the first few rows of the dataframe
+# Display first few rows of the dataframe
 data.head()
 ```
 
