@@ -169,21 +169,6 @@ data.info()
 data.describe()
 ```
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -292,45 +277,9 @@ data.describe()
 </div>
 
 
-
-### **Task 2b. Assess data types**
-
-In Tableau, staying on the data source page, double check the data types of the columns in the dataset. Refer to the dimensions and measures in Tableau.
-
-
-Review the instructions linked in the previous Activity document to create the required Tableau visualization.
-
-### **Task 2c. Select visualization type(s)**
-
-Select data visualization types that will help you understand and explain the data.
-
-Now that you know which data columns you’ll use, it is time to decide which data visualization makes the most sense for EDA of the TikTok dataset. What type of data visualization(s) would be most helpful? Consider the distribution of the data.
-
-* Line graph
-* Bar chart
-* Box plot
-* Histogram
-* Heat map
-* Scatter plot
-* A geographic map
-
-
-==> ENTER YOUR RESPONSE HERE
-
-<img src="images/Construct.png" width="100" height="100" align=left>
-
-## **PACE: Construct**
-
-Consider the questions in your PACE Strategy Document to reflect on the Construct stage.
-
-### **Task 3. Build visualizations**
-
-Now that you have assessed your data, it’s time to plot your visualization(s).
+### Build visualizations**
 
 #### **video_duration_sec**
-
-Create a box plot to examine the spread of values in the `video_duration_sec` column.
-
 
 ```python
 # Boxplot to visualize distribution of `video_duration_sec`
