@@ -20,23 +20,6 @@ data = pd.read_csv("tiktok_dataset.csv")
 data.head()
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -143,31 +126,19 @@ data.head()
 data.size
 ```
 
-
-
-
     232584
 
 
-
-
 ```python
-# Get the shape of the data
+# Shape of the data
 data.shape
 ```
-
-
-
 
     (19382, 12)
 
 
-
-Get basic information about the data, using `.info()`.
-
-
 ```python
-# Get basic information about the data
+# Basic information about the data
 data.info()
 ```
 
@@ -192,15 +163,11 @@ data.info()
     memory usage: 1.8+ MB
 
 
-Generate a table of descriptive statistics, using `.describe()`.
-
 
 ```python
-# Generate a table of descriptive statistics
+# Descriptive statistics
 data.describe()
 ```
-
-
 
 
 <div>
