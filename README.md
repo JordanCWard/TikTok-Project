@@ -16,6 +16,7 @@ get ideas from python tiktok in github?
 get ideas from tableau visuals on their site?
 
 
-2. Add Course 3 module 5 executive summary to GitHub, use example to create
+2. Add Course 3 module 5 executive summary to GitHub, use example from this link to create
+https://www.coursera.org/learn/go-beyond-the-numbers-translate-data-into-insight/supplement/juKj7/activity-exemplar-create-your-course-3-tiktok-project
 
 -->
