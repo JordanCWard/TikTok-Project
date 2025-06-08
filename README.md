@@ -6,6 +6,7 @@
 https://public.tableau.com/views/TikTokproject_17484441879150/Dashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
 ideas for things to add to tableau
+something about outliers
 scatter plot with two measures, colored by a dimension
 grouped scatter plot
 word cloud for video transcriptions
